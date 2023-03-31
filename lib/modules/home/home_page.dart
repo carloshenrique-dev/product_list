@@ -81,11 +81,10 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text("Logout"),
-              onTap: () {
-                FirebaseAuth.instance.signOut();
-
+              onTap: () async {
                 // Ir para a tela de login
-                context.pushReplacementNamed(AppRoutes.login.name);
+                await FirebaseAuth.instance.signOut().whenComplete(
+                    () => context.pushReplacementNamed(AppRoutes.login.name));
               },
             ),
           ],

@@ -12,11 +12,6 @@ final GoRouter routes = GoRouter(
   debugLogDiagnostics: true,
   restorationScopeId: 'router',
   routes: [
-    /*GoRoute(
-      path: '/',
-      name: AppRoutes.welcome.name,
-      builder: (context, state) => const WelcomePage(),
-    ),*/
     GoRoute(
       path: '/product',
       name: AppRoutes.product.name,
